@@ -4,10 +4,10 @@ const locationController = require('../controller/locationController');
 
 
 router.post("/locations",locationController.createLocation)
-// router.get('/locations',locationController);
-// router.get('/locations/:id',locationController);
-// router.put('/locations/:id',locationController);
-// router.delete('/locations/:id',locationController);
-// router.get('locations/coordinates',locationController);
+router.get('/locations',locationController.getAllLocation);
+router.get('/locations/:id',locationController.getLocationById);
+router.put('/locations/:id',locationController.updateLocation);
+router.delete('/locations/:id',locationController.deleteLocation);
+router.get('/coordinates',locationController.getAllCoordinates);
 
 module.exports = router;
